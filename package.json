@@ -1,0 +1,51 @@
+{
+  "name": "stavba-app-finale",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "electron:dev": "concurrently \"vite\" \"electron .\"",
+    "electron:build": "vite build && electron-builder -p always"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "electron-updater": "^6.1.7",
+    "lucide-react": "^0.294.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@vitejs/plugin-react": "^4.2.0",
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.2",
+    "electron": "^28.1.0",
+    "electron-builder": "^24.9.1",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.4.21"
+  },
+  "build": {
+    "appId": "com.mojastavba.app",
+    "productName": "MojaStavba",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "VaseMenoNaGithube",
+        "repo": "NazovRepozitara"
+      }
+    ],
+    "directories": {
+      "output": "dist_electron"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  }
+}
