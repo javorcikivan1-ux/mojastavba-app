@@ -124,33 +124,33 @@ export const LandingScreen = ({ onStart, onLogin, onWorker, onTryFree, onSubscri
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pt-safe-top overflow-y-auto scroll-container flex flex-col">
-      <nav className="border-b border-slate-200 sticky top-0 bg-white/90 backdrop-blur-md z-50 shrink-0">
-        <div className="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
+      <nav className="border-b border-slate-200 sticky top-0 bg-white/95 backdrop-blur-md z-50 shrink-0">
+        <div className="max-w-6xl mx-auto px-4 md:px-6 h-16 md:h-20 flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2 md:gap-2.5 min-w-0 shrink">
             <img 
               src="https://lordsbenison.sk/wp-content/uploads/2025/12/image-1.png" 
               alt="Logo" 
-              className="w-9 h-9 object-contain" 
+              className="w-8 h-8 md:w-9 md:h-9 object-contain shrink-0" 
             />
-            <span className="font-extrabold text-xl tracking-tight text-slate-900">Moja<span className="text-orange-600">Stavba</span></span>
+            <span className="font-extrabold text-lg md:text-xl tracking-tight text-slate-900 truncate">Moja<span className="text-orange-600">Stavba</span></span>
           </div>
 
-          <div className="flex items-center gap-2 md:gap-3">
+          <div className="flex items-center gap-1.5 md:gap-3 shrink-0">
              <button 
                 onClick={onSubscriptionClick} 
-                className="hidden sm:block text-xs font-bold text-slate-500 hover:text-orange-600 px-4 py-2 rounded-xl border border-slate-200 hover:border-orange-200 transition-all"
+                className="hidden lg:block text-xs font-bold text-slate-500 hover:text-orange-600 px-4 py-2 rounded-xl border border-slate-200 hover:border-orange-200 transition-all"
              >
                 Predplatné
              </button>
              <button 
                 onClick={onTryFree} 
-                className="px-5 py-2.5 text-xs font-bold text-white bg-orange-600 hover:bg-orange-700 rounded-xl shadow-lg shadow-orange-200 transition transform hover:-translate-y-0.5 active:scale-95"
+                className="px-3 md:px-5 py-2 md:py-2.5 text-[10px] md:text-xs font-bold text-white bg-orange-600 hover:bg-orange-700 rounded-lg md:rounded-xl shadow-lg shadow-orange-200 transition transform hover:-translate-y-0.5 active:scale-95 whitespace-nowrap"
              >
                 Vyskúšať zadarmo
              </button>
              <button 
                 onClick={onLogin} 
-                className="text-xs font-bold text-slate-500 hover:text-orange-600 px-4 py-2 rounded-xl border border-slate-200 hover:border-orange-200 transition-all"
+                className="px-2 md:px-4 py-2 text-[10px] md:text-xs font-bold text-slate-500 hover:text-orange-600 rounded-lg md:rounded-xl border border-transparent md:border-slate-200 hover:border-orange-200 transition-all whitespace-nowrap"
              >
                 Prihlásiť sa
              </button>
@@ -158,22 +158,22 @@ export const LandingScreen = ({ onStart, onLogin, onWorker, onTryFree, onSubscri
         </div>
       </nav>
 
-      <section className="flex-1 flex flex-col items-center justify-center px-4 py-16 bg-gradient-to-b from-orange-50/50 to-white text-center">
+      <section className="flex-1 flex flex-col items-center justify-center px-6 py-12 md:py-24 bg-gradient-to-b from-orange-50/50 to-white text-center">
         <div className="max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 bg-white border border-orange-100 px-3 py-1 rounded-full text-xs font-bold text-orange-600 mb-6 shadow-sm">
+          <div className="inline-flex items-center gap-2 bg-white border border-orange-100 px-3 py-1 rounded-full text-[10px] md:text-xs font-bold text-orange-600 mb-6 shadow-sm">
             <span className="w-2 h-2 rounded-full bg-orange-600 animate-pulse"></span>
             Verzia 3.1.3 Online
           </div>
-          <h1 className="text-4xl md:text-7xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight">
+          <h1 className="text-3xl md:text-7xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight">
             Stavebný manažment<br/>
             <span className="text-orange-600">pre moderné firmy</span>
           </h1>
-          <h2 className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <h2 className="text-base md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
             Kompletná správa zákaziek, dochádzky či analytiky v jednej aplikácii.<br/>
             <span className="font-semibold text-slate-800">Vyskúšajte na 14 dní bez zadávania platobných údajov.</span>
           </h2>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 md:px-0">
             <button onClick={onStart} className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-orange-600 text-white rounded-2xl font-bold shadow-xl shadow-orange-200 hover:bg-orange-700 transition">
               Vytvoriť Firemný Účet <ChevronRight size={20} />
             </button>
